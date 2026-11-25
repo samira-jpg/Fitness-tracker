@@ -53,6 +53,7 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
+[hidden]{display:none !important}   /* author rules like .btn{display:inline-flex} otherwise beat the attribute */
 html,body{margin:0}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
 button,input,select,textarea{font:inherit;color:inherit}
@@ -346,6 +347,7 @@ footer{color:var(--muted);font-size:12px;padding-bottom:36px}
 body.gated nav,body.gated main,body.gated footer{display:none}
 body.coach .tabs a[data-v="train"]{display:none}
 body.coach #coachBanner{display:flex}
+body.coach .share{display:none}   /* that box is addressed to the athlete, not the coach */
 #coachBanner{display:none;gap:9px;align-items:center;background:var(--accent-soft);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;font-size:13px;margin-bottom:12px}
 .linkrow{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border-top:1px solid var(--hair);padding:8px 0;font-size:12.5px}
 .linkrow code{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;word-break:break-all;color:var(--muted)}
